@@ -5,8 +5,9 @@ A simple Facet transaction miner for the Sepolia network, designed to generate a
 ## Features
 
 - Sends Facet transactions using the provided wallet.
-- Monitors ETH balance to ensure mining stops if it drops below a user-specified threshold.
-- Logs current ETH balance, Transaction Count, and L1/Facet transaction hashes.
+- Monitors ETH balance to ensure mining halts if it drops below a user-specified threshold.
+- Before each transaction, logs Current ETH balance
+- After each transaction, logs L1/Facet Transaction Hashes, FCT Mint Amount, and FCT Mint Rate.
 - Supports both single-run and recursive mining modes.
 
 ---
@@ -51,10 +52,12 @@ Give it a few seconds - eventually you'll be prompted to enter (1) or (2), choos
 
 Example Output:
 For each transaction, the miner logs:
-- ETH balance remaining
+- Current ETH Balance (before transaction)
 - Transaction Count
 - L1 Transaction Hash
 - Facet Transaction Hash
+- FCT Mint Amount
+- FCT Mint Rate
 
 ## License
 This project is open-source and available under the MIT License.
