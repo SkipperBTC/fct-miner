@@ -1,7 +1,7 @@
 const readline = require("readline");
 const { walletL1FacetActions } = require("@0xfacet/sdk/viem");
 const { privateKeyToAccount } = require("viem/accounts");
-const { createWalletClient, http } = require("viem");
+const { createWalletClient, http, formatEther } = require("viem"); // Added formatEther import
 const { sepolia } = require("viem/chains");
 require("dotenv").config();
 
@@ -49,11 +49,12 @@ async function sendTransaction(counter, walletClient) {
     console.log("Facet Transaction Hash:", facetTransactionHash);
 
     if (fctMintAmount && fctMintRate) {
-      console.log(`FCT Mint Amount: ${fctMintAmount.toString()} FCT`);
-      console.log(`FCT Mint Rate: ${fctMintRate.toString()} FCT per gas unit`);
+      console.log(`FCT Mint Amount: ${Number(formatEther(fctMintAmount)).toFixed(6)} FCT`);
+      console.log(`FCT Mint Rate: ${Number(formatEther(fctMintRate)).toFixed(6)} FCT per gas unit`);
     } else {
       console.log("FCT Mint Amount and Mint Rate not available.");
     }
+    
 
     return true;
   } catch (error) {
