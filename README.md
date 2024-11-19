@@ -63,4 +63,4 @@ This project is open-source and available under the MIT License.
 - This tool is designed for the Sepolia testnet and is not suitable for production use.
 - Verify your `.env` settings carefully to avoid exposing private keys.
 - Be warned, if you choose Recursive Mining it's going to continuously send transactions using your ETH balance. Manage your ETH balance accordingly.
-- The FCT issuance rate (per calldata gas unit) changes over time (read docs here: https://docs.facet.org/3.-technical-details/facets-gas-mechanism).
+- The FCT issuance rate (per calldata gas unit) changes over time, [read docs here](https://docs.facet.org/3.-technical-details/facets-gas-mechanism).
