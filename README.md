@@ -25,7 +25,7 @@ A simple Facet transaction miner for the Sepolia network, designed to generate a
 2. Create a new folder on your desktop (replacing `<YourUsername>`):
    ```bash
    mkdir "C:\Users\<YourUsername>\Desktop\fct-miner"
-3. Change into that folder:
+3. Change into that folder (replacing `<YourUsername>`):
    ```bash
    cd "C:\Users\<YourUsername>\Desktop\fct-miner"
 4. Clone this repository into the current folder (note the `.` at the end to prevent a subfolder from being created):
