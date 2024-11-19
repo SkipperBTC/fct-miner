@@ -21,19 +21,25 @@ A simple Facet transaction miner for the Sepolia network, designed to generate a
 
 ### Setup
 
-1. Clone this repository:
+1. Open CommandPrompt
+2. Create a new folder on your desktop (replacing `<YourUsername>`):
    ```bash
-   git clone https://github.com/your-repo/fct-miner.git
-   cd fct-miner
-2. Install dependencies:
+   mkdir "C:\Users\<YourUsername>\Desktop\fct-miner"
+3. Change into that folder:
+   ```bash
+   cd "C:\Users\<YourUsername>\Desktop\fct-miner"
+4. Clone this repository into the current folder (note the `.` at the end to prevent a subfolder from being created):
+   ```bash
+   git clone https://github.com/0xFacet/fct-miner.git .
+5. Install dependencies:
    ```bash
    npm install
-3. Create a `.env` file in the project directory with the following content:
+6. Create a `.env` file in the project directory with the following content:
    ```bash
    PRIVATE_KEY=0xYOUR_PRIVATE_KEY
    FACET_RPC=https://sepolia.facet.org
    ETH_THRESHOLD=5000000000000000 # Minimum ETH balance in wei before stopping (example: 0.005 ETH)
-4. Ensure you have Sepolia ETH in your wallet for transaction fees.
+7. Ensure you have Sepolia ETH in your wallet for transaction fees.
 
 ### Usage
 1. Run the miner script with:
