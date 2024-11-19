@@ -34,7 +34,7 @@ A simple Facet transaction miner for the Sepolia network, designed to generate a
 5. Install dependencies:
    ```bash
    npm install
-6. Create a `.env` file in the project directory with the following content:
+6. Create a `.env` file in the project directory with the following content (replacing `0xYOUR_PRIVATE_KEY` - keep the 0x prefix):
    ```bash
    PRIVATE_KEY=0xYOUR_PRIVATE_KEY
    FACET_RPC=https://sepolia.facet.org
