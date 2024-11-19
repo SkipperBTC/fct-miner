@@ -45,8 +45,7 @@ A simple Facet transaction miner for the Sepolia network, designed to generate a
 1. Run the miner script with:
    ```bash
    node miner.js
-
-When you run the miner, you'll be prompted to choose between:
+Give it a few seconds - eventually you'll be prompted to choose between:
 - Fixed Number of Transactions: Specify how many transactions to send.
 - Recursive Mining: Automatically send transactions until either you run out of ETH (per threshold set in `.env`) OR you manually stop the script.
 
