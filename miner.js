@@ -37,12 +37,23 @@ async function sendTransaction(counter, walletClient) {
       extraData: "0x27298cee04301b63a8b9cc775eaf413a2074277535bc5803044047db98ebe7df27298cee04301b63a8b9cc775eaf413a2074277535bc5803044047db98ebe7df",
     };
 
-    const { l1TransactionHash, facetTransactionHash } =
-      await walletClient.sendFacetTransaction(params);
+    const {
+      l1TransactionHash,
+      facetTransactionHash,
+      fctMintAmount,
+      fctMintRate,
+    } = await walletClient.sendFacetTransaction(params);
 
     console.log(`Transaction ${counter + 1} sent successfully!`);
     console.log("L1 Transaction Hash:", l1TransactionHash);
     console.log("Facet Transaction Hash:", facetTransactionHash);
+
+    if (fctMintAmount && fctMintRate) {
+      console.log(`FCT Mint Amount: ${fctMintAmount.toString()} FCT`);
+      console.log(`FCT Mint Rate: ${fctMintRate.toString()} FCT per gas unit`);
+    } else {
+      console.log("FCT Mint Amount and Mint Rate not available.");
+    }
 
     return true;
   } catch (error) {
