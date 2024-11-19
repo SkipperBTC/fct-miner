@@ -11,7 +11,7 @@ A simple Facet transaction miner for the Sepolia network, designed to generate a
 
 ---
 
-## Installation
+## Installation & Use
 
 ### Prerequisites
 
@@ -19,7 +19,7 @@ A simple Facet transaction miner for the Sepolia network, designed to generate a
 - An Ethereum wallet with some Sepolia ETH (testnet ETH).
 - A `.env` file with your private key, RPC endpoint, and minimum ETH balance threshold.
 
-### Steps
+### Setup
 
 1. Clone this repository:
    ```bash
@@ -34,10 +34,11 @@ A simple Facet transaction miner for the Sepolia network, designed to generate a
    FACET_RPC=https://sepolia.facet.org
    ETH_THRESHOLD=5000000000000000 # Minimum ETH balance in wei before stopping (example: 0.005 ETH)
 4. Ensure you have Sepolia ETH in your wallet for transaction fees.
-5. Run the miner script with:
+
+### Usage
+1. Run the miner script with:
    ```bash
    node miner.js
-### Mining Options
 
 When you run the miner, you'll be prompted to choose between:
 - Fixed Number of Transactions: Specify how many transactions to send.
@@ -55,5 +56,5 @@ This project is open-source and available under the MIT License.
 
 ## Notes
 - This tool is designed for the Sepolia testnet and is not suitable for production use.
-- Verify your .env settings carefully to avoid exposing private keys.
+- Verify your `.env` settings carefully to avoid exposing private keys.
 - The FCT issuance rate (per calldata gas unit) changes over time (read docs here: https://docs.facet.org/3.-technical-details/facets-gas-mechanism).
